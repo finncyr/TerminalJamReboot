@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=1]
+[ext_resource path="res://consolas/Consolas.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://MainGame.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextInterfaceEngine" type="ReferenceRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 599.0
+border_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+FONT = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
